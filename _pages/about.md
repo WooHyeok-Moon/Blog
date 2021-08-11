@@ -4,8 +4,6 @@ title: About Me
 permalink: /about/
 ---
 
-This website is powered by **[fastpages](https://github.com/fastai/fastpages)** [^1].
+## 전북대학교 통계학과 2학년 재학
 
-
-
-[^1]:a blogging platform that natively supports Jupyter notebooks in addition to other formats.
+## 머신러닝, 딥러닝 공부 중..
