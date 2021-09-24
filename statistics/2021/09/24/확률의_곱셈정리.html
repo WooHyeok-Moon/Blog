@@ -4,17 +4,20 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>Tags | Brain</title>
+<title>확률의 곱셈정리 | Brain</title>
 <meta name="generator" content="Jekyll v4.1.1" />
-<meta property="og:title" content="Tags" />
+<meta property="og:title" content="확률의 곱셈정리" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="A theory warehouse" />
-<meta property="og:description" content="A theory warehouse" />
-<link rel="canonical" href="https://woohyeok-moon.github.io/Blog/categories/" />
-<meta property="og:url" content="https://woohyeok-moon.github.io/Blog/categories/" />
+<meta name="description" content="complete" />
+<meta property="og:description" content="complete" />
+<link rel="canonical" href="https://woohyeok-moon.github.io/Blog/statistics/2021/09/24/%ED%99%95%EB%A5%A0%EC%9D%98_%EA%B3%B1%EC%85%88%EC%A0%95%EB%A6%AC.html" />
+<meta property="og:url" content="https://woohyeok-moon.github.io/Blog/statistics/2021/09/24/%ED%99%95%EB%A5%A0%EC%9D%98_%EA%B3%B1%EC%85%88%EC%A0%95%EB%A6%AC.html" />
 <meta property="og:site_name" content="Brain" />
+<meta property="og:image" content="https://woohyeok-moon.github.io/Blog/images/chart-preview.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-09-24T00:00:00-05:00" />
 <script type="application/ld+json">
-{"description":"A theory warehouse","url":"https://woohyeok-moon.github.io/Blog/categories/","@type":"WebPage","headline":"Tags","@context":"https://schema.org"}</script>
+{"description":"complete","url":"https://woohyeok-moon.github.io/Blog/statistics/2021/09/24/%ED%99%95%EB%A5%A0%EC%9D%98_%EA%B3%B1%EC%85%88%EC%A0%95%EB%A6%AC.html","@type":"BlogPosting","headline":"확률의 곱셈정리","dateModified":"2021-09-24T00:00:00-05:00","datePublished":"2021-09-24T00:00:00-05:00","image":"https://woohyeok-moon.github.io/Blog/images/chart-preview.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://woohyeok-moon.github.io/Blog/statistics/2021/09/24/%ED%99%95%EB%A5%A0%EC%9D%98_%EA%B3%B1%EC%85%88%EC%A0%95%EB%A6%AC.html"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/Blog/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://woohyeok-moon.github.io/Blog/feed.xml" title="Brain" /><link rel="shortcut icon" type="image/x-icon" href="/Blog/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -82,81 +85,115 @@ window.onload = wrap_img;
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <div class="home">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">10. 확률의 곱셈정리</h1><p class="page-description">complete</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2021-09-24T00:00:00-05:00" itemprop="datePublished">
+        Sep 24, 2021
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      1 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/Blog/categories/#Statistics">Statistics</a>
+        
+      
+      </p>
+    
+
+    
+      
+        <div class="pb-5 d-flex flex-wrap flex-justify-end">
+          <div class="px-2">
+
+    <a href="https://github.com/WooHyeok-Moon/Blog/tree/master/_notebooks/2021-09-24-확률의_곱셈정리.ipynb" role="button" target="_blank">
+<img class="notebook-badge-image" src="/Blog/assets/badges/github.svg" alt="View On GitHub">
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://mybinder.org/v2/gh/WooHyeok-Moon/Blog/master?filepath=_notebooks%2F2021-09-24-%ED%99%95%EB%A5%A0%EC%9D%98_%EA%B3%B1%EC%85%88%EC%A0%95%EB%A6%AC.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/Blog/assets/badges/binder.svg" alt="Open In Binder"/>
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://colab.research.google.com/github/WooHyeok-Moon/Blog/blob/master/_notebooks/2021-09-24-확률의_곱셈정리.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/Blog/assets/badges/colab.svg" alt="Open In Colab"/>
+    </a>
+</div>
+        </div>
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul class="section-nav">
+<li class="toc-entry toc-h2"><a href="#확률의-곱셈정리">확률의 곱셈정리 </a></li>
+</ul><!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2021-09-24-확률의_곱셈정리.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="확률의-곱셈정리">
+<a class="anchor" href="#%ED%99%95%EB%A5%A0%EC%9D%98-%EA%B3%B1%EC%85%88%EC%A0%95%EB%A6%AC" aria-hidden="true"><span class="octicon octicon-link"></span></a>확률의 곱셈정리<a class="anchor-link" href="#%ED%99%95%EB%A5%A0%EC%9D%98-%EA%B3%B1%EC%85%88%EC%A0%95%EB%A6%AC"> </a>
+</h2>
+<ul>
+<li>조건부 확률에서 아래의 식을 배웠습니다.</li>
+</ul>
+<p>
+$$P(A|B) = \frac{P(A \cap B)}{P(B)}$$
+</p>
+<ul>
+<li>이 식을 통해 다음의 관계식을 얻을 수 있습니다.</li>
+</ul>
+<p>
+$$P(A \cap B) = P(B) \cdot P(A|B)$$
 
 
-<h2>Contents</h2>
-
-  
-  
-  
-
-  <ul>
-  
-    <li><a href="#Statistics">Statistics</a></li>
-  
-  </ul>
-
-  
-      <h3 id ="Statistics"><i class="fas fa-tags category-tags-icon"></i></i> Statistics</h3>
-      <a name="Statistics"></a>
-      
-        <article class="archive-item">
-          <p class="post-meta post-meta-title"><a class="page-meta" href="/Blog/statistics/2021/09/24/%ED%99%95%EB%A5%A0%EC%9D%98_%EA%B3%B1%EC%85%88%EC%A0%95%EB%A6%AC.html">10. 확률의 곱셈정리</a>  • Sep 24, 2021</p>
-        </article>
-        
-      
-        <article class="archive-item">
-          <p class="post-meta post-meta-title"><a class="page-meta" href="/Blog/statistics/2021/08/20/%EC%A1%B0%EA%B1%B4%EB%B6%80_%ED%99%95%EB%A5%A0.html">9. 조건부 확률</a>  • Aug 20, 2021</p>
-        </article>
-        
-      
-        <article class="archive-item">
-          <p class="post-meta post-meta-title"><a class="page-meta" href="/Blog/statistics/2021/08/19/%ED%99%95%EB%A5%A0%EC%9D%98-%EB%8D%A7%EC%85%88%EC%A0%95%EB%A6%AC.html">8. 확률의 덧셈정리</a>  • Aug 19, 2021</p>
-        </article>
-        
-      
-        <article class="archive-item">
-          <p class="post-meta post-meta-title"><a class="page-meta" href="/Blog/statistics/2021/08/18/%ED%99%95%EB%A5%A0-%EA%B3%B5%EB%A6%AC.html">7. 확률 공리</a>  • Aug 18, 2021</p>
-        </article>
-        
-      
-        <article class="archive-item">
-          <p class="post-meta post-meta-title"><a class="page-meta" href="/Blog/statistics/2021/08/17/%EC%88%9C%EC%97%B4%EA%B3%BC_%EC%A1%B0%ED%95%A9(3).html">6. 순열과 조합(3)</a>  • Aug 17, 2021</p>
-        </article>
-        
-      
-        <article class="archive-item">
-          <p class="post-meta post-meta-title"><a class="page-meta" href="/Blog/statistics/2021/08/15/%EC%88%9C%EC%97%B4%EA%B3%BC_%EC%A1%B0%ED%95%A9(2).html">5. 순열과 조합(2)</a>  • Aug 15, 2021</p>
-        </article>
-        
-      
-        <article class="archive-item">
-          <p class="post-meta post-meta-title"><a class="page-meta" href="/Blog/statistics/2021/08/14/%EC%88%9C%EC%97%B4%EA%B3%BC_%EC%A1%B0%ED%95%A9(1).html">4. 순열과 조합(1)</a>  • Aug 14, 2021</p>
-        </article>
-        
-      
-        <article class="archive-item">
-          <p class="post-meta post-meta-title"><a class="page-meta" href="/Blog/statistics/2021/08/13/%ED%95%A9%EC%9D%98_%EB%B2%95%EC%B9%99_%EA%B3%B1%EC%9D%98_%EB%B2%95%EC%B9%99.html">3. 합의 법칙, 곱의 법칙</a>  • Aug 13, 2021</p>
-        </article>
-        
-      
-        <article class="archive-item">
-          <p class="post-meta post-meta-title"><a class="page-meta" href="/Blog/statistics/2021/08/12/%ED%99%95%EB%A5%A0%EC%9D%98_%EA%B0%9C%EB%85%90(2).html">2. 확률의 개념(2)</a>  • Aug 12, 2021</p>
-        </article>
-        
-      
-        <article class="archive-item">
-          <p class="post-meta post-meta-title"><a class="page-meta" href="/Blog/statistics/2021/08/11/%ED%99%95%EB%A5%A0%EC%9D%98_%EA%B0%9C%EB%85%90(1).html">1. 확률의 개념(1)</a>  • Aug 11, 2021</p>
-        </article>
-        
-      
-  
-
-
-
+$$P(A \cap B) = P(A) \cdot P(B|A)$$
+</p>
+<ul>
+<li>이렇게 얻은 식을 우리는 <code>확률의 곱셈정리</code> 라고 합니다. 예를 들어 철수와 영희가 차례로 5개의 제비 중 2개의 당첨제비가 있는 제비뽑기를 한다고 가정했을 때 철수가 당첨되는 사건을 A, 영희가 당첨되는 확률을 B라고 하겠습니다. 철수가 뽑은 제비는 다시 넣지 않는 비복원추출입니다. 이 때 사건 A는 사건 B에 영향을 미치게 됩니다. 따라서 A와 B가 동시에 일어날 확률 $P(A \cap B)$는 $P(A) \cdot P(B|A)$가 됩니다. 직접 구해보면 아래와 같다는 것을 알 수 있을 것입니다.</li>
+</ul>
+<p>
+$$P(A \cap B) = \frac{2}{5} \cdot \frac{1}{4} = \frac{1}{10}$$
+</p>
+<ul>
+<li>하지만 만약 두 사건이 위와 다르게 서로 영향을 미치지 않는다면, 즉 <code>독립</code>이라면, $P(A|B) = P(A)$이므로 아래와 같은 식을 얻어낼 수 있습니다.</li>
+</ul>
+<p>
+$$P(A \cap B) = P(A) \cdot P(B)$$
+</p>
 
 </div>
+</div>
+</div>
+</div>
+
+
+
+  </div><!-- from https://github.com/utterance/utterances -->
+<script src="https://utteranc.es/client.js"
+        repo="WooHyeok-Moon/Blog"
+        issue-term="title"
+        label="blogpost-comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script><a class="u-url" href="/Blog/statistics/2021/09/24/%ED%99%95%EB%A5%A0%EC%9D%98_%EA%B3%B1%EC%85%88%EC%A0%95%EB%A6%AC.html" hidden></a>
+</article>
       </div>
     </main><footer class="site-footer h-card">
   <data class="u-url" href="/Blog/"></data>
