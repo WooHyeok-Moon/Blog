@@ -162,16 +162,16 @@ window.onload = wrap_img;
 
 $$P(A)=\sum_{i=1}^k P(B_i)P(A|B_i)$$
 
-가 성립한다. 이를 <code>전확률 공식</code> 또는 <code>전체확률의 공식</code> 이라고 한다.</p>
+가 성립한다. 이를 <code>전확률 공식</code> 또는 <code>전체확률의 공식</code> 이라고 합니다.</p>
 </li>
 <li>
-<p>표본공간 $S$가 서로 배반인 사건 $B_1, B_2, \dots, B_k$로 이루어져 있다면 그 표본공간 내부의 사건 $A$의 확률은 $A$와 $B_i$의 교집합들의 확률의 합으로 표현할 수 있다.
+<p>표본공간 $S$가 서로 배반인 사건 $B_1, B_2, \dots, B_k$로 이루어져 있다면 그 표본공간 내부의 사건 $A$의 확률은 $A$와 $B_i$의 교집합들의 확률의 합으로 표현할 수 있습니다.
 
 $$P(A)=P(A \cap B_i) + P(A \cap B_2) + \cdots + P(A \cap B_k)$$
 </p>
 </li>
 <li>
-<p>조건부 확률에서 배운 식을 적용하면 아래와 같은 식을 유도할 수 있다.
+<p>조건부 확률에서 배운 식을 적용하면 아래와 같은 식을 유도할 수 있습니다.
 
 $$P(A \cap B_i) = P(B_i) \cdot P(A|B_i)$$
 
@@ -180,7 +180,7 @@ $$P(A) = P(B_1)P(A|B_1) + P(B_2)P(A|B_2) + \cdots + P(B_k)P(A|B_k)$$
 </p>
 </li>
 <li>
-<p>이는 베이즈 정리를 유도하기 위한 중간 과정이라고 생각해도 무방하다.</p>
+<p>이는 베이즈 정리를 유도하기 위한 중간 과정이라고 생각해도 무방합니다.</p>
 </li>
 </ul>
 
@@ -193,25 +193,15 @@ $$P(A) = P(B_1)P(A|B_1) + P(B_2)P(A|B_2) + \cdots + P(B_k)P(A|B_k)$$
 <h2 id="베이즈-정리">
 <a class="anchor" href="#%EB%B2%A0%EC%9D%B4%EC%A6%88-%EC%A0%95%EB%A6%AC" aria-hidden="true"><span class="octicon octicon-link"></span></a>베이즈 정리<a class="anchor-link" href="#%EB%B2%A0%EC%9D%B4%EC%A6%88-%EC%A0%95%EB%A6%AC"> </a>
 </h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
 <ul>
 <li>
 <p>사건 $B_1, B_2, \dots, B_k$는 상호배반이며 $(B_i \cap B_j = \varnothing, i \neq j, \cup_{i=1}^k B_i=S)$라고 한다. 이 때 임의의 사건 A가 일어났다는 조건 하에서 사건 B_j가 일어날 확률은
-
-$$P(B_j|A)=\frac{P(B_j)P(A|B_j)}{\sum_{i=1}^k P(B_i)P(A|B_i)}$$
-
+  $$P(B_j|A)=\frac{P(B_j)P(A|B_j)}{\sum_{i=1}^k P(B_i)P(A|B_i)}$$
 가 성립한다. 이를 <code>베이즈 정리</code> 라고 한다.</p>
 </li>
 <li>
 <p>좌항을 변환해보면 $P(B_j|A)=\frac{P(A \cap B_j)}{P(A)}$이고, 분자에는 조건부 확률의 공식, 분모에는 전확률의 공식을 적용하면 아래의 식을 유도할 수 있다.
-
-$$\frac{P(B_j)P(A|B_j)}{\sum_{i=1}^k P(B_i)P(A|B_i)}$$
-</p>
+  $$\frac{P(B_j)P(A|B_j)}{\sum_{i=1}^k P(B_i)P(A|B_i)}$$</p>
 </li>
 <li>
 <p>이는 추후 베이지안 통계학의 기초가 된다.</p>
