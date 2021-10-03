@@ -4,20 +4,20 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>순열과 조합(1) | Brain</title>
+<title>베이즈 정리 | Brain</title>
 <meta name="generator" content="Jekyll v4.1.1" />
-<meta property="og:title" content="순열과 조합(1)" />
+<meta property="og:title" content="베이즈 정리" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="complete" />
 <meta property="og:description" content="complete" />
-<link rel="canonical" href="https://woohyeok-moon.github.io/Blog/statistics/2021/08/14/%EC%88%9C%EC%97%B4%EA%B3%BC_%EC%A1%B0%ED%95%A9(1).html" />
-<meta property="og:url" content="https://woohyeok-moon.github.io/Blog/statistics/2021/08/14/%EC%88%9C%EC%97%B4%EA%B3%BC_%EC%A1%B0%ED%95%A9(1).html" />
+<link rel="canonical" href="https://woohyeok-moon.github.io/Blog/statistical%20mathematics/2021/10/01/%EB%B2%A0%EC%9D%B4%EC%A6%88_%EC%A0%95%EB%A6%AC.html" />
+<meta property="og:url" content="https://woohyeok-moon.github.io/Blog/statistical%20mathematics/2021/10/01/%EB%B2%A0%EC%9D%B4%EC%A6%88_%EC%A0%95%EB%A6%AC.html" />
 <meta property="og:site_name" content="Brain" />
 <meta property="og:image" content="https://woohyeok-moon.github.io/Blog/images/chart-preview.png" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2021-08-14T00:00:00-05:00" />
+<meta property="article:published_time" content="2021-10-01T00:00:00-05:00" />
 <script type="application/ld+json">
-{"description":"complete","url":"https://woohyeok-moon.github.io/Blog/statistics/2021/08/14/%EC%88%9C%EC%97%B4%EA%B3%BC_%EC%A1%B0%ED%95%A9(1).html","@type":"BlogPosting","headline":"순열과 조합(1)","dateModified":"2021-08-14T00:00:00-05:00","datePublished":"2021-08-14T00:00:00-05:00","image":"https://woohyeok-moon.github.io/Blog/images/chart-preview.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://woohyeok-moon.github.io/Blog/statistics/2021/08/14/%EC%88%9C%EC%97%B4%EA%B3%BC_%EC%A1%B0%ED%95%A9(1).html"},"@context":"https://schema.org"}</script>
+{"description":"complete","url":"https://woohyeok-moon.github.io/Blog/statistical%20mathematics/2021/10/01/%EB%B2%A0%EC%9D%B4%EC%A6%88_%EC%A0%95%EB%A6%AC.html","@type":"BlogPosting","headline":"베이즈 정리","dateModified":"2021-10-01T00:00:00-05:00","datePublished":"2021-10-01T00:00:00-05:00","image":"https://woohyeok-moon.github.io/Blog/images/chart-preview.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://woohyeok-moon.github.io/Blog/statistical%20mathematics/2021/10/01/%EB%B2%A0%EC%9D%B4%EC%A6%88_%EC%A0%95%EB%A6%AC.html"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/Blog/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://woohyeok-moon.github.io/Blog/feed.xml" title="Brain" /><link rel="shortcut icon" type="image/x-icon" href="/Blog/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -88,8 +88,8 @@ window.onload = wrap_img;
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">4. 순열과 조합(1)</h1><p class="page-description">complete</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2021-08-14T00:00:00-05:00" itemprop="datePublished">
-        Aug 14, 2021
+    <h1 class="post-title p-name" itemprop="name headline">11. 베이즈 정리</h1><p class="page-description">complete</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2021-10-01T00:00:00-05:00" itemprop="datePublished">
+        Oct 1, 2021
       </time>
        • <span class="read-time" title="Estimated read time">
     
@@ -101,7 +101,7 @@ window.onload = wrap_img;
     
       <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
       
-        <a class="category-tags-link" href="/Blog/categories/#Statistics">Statistics</a>
+        <a class="category-tags-link" href="/Blog/categories/#Statistical Mathematics">Statistical Mathematics</a>
         
       
       </p>
@@ -112,19 +112,19 @@ window.onload = wrap_img;
         <div class="pb-5 d-flex flex-wrap flex-justify-end">
           <div class="px-2">
 
-    <a href="https://github.com/WooHyeok-Moon/Blog/tree/master/_notebooks/2021-08-14-순열과_조합(1).ipynb" role="button" target="_blank">
+    <a href="https://github.com/WooHyeok-Moon/Blog/tree/master/_notebooks/2021-10-01-베이즈_정리.ipynb" role="button" target="_blank">
 <img class="notebook-badge-image" src="/Blog/assets/badges/github.svg" alt="View On GitHub">
     </a>
 </div>
 
           <div class="px-2">
-    <a href="https://mybinder.org/v2/gh/WooHyeok-Moon/Blog/master?filepath=_notebooks%2F2021-08-14-%EC%88%9C%EC%97%B4%EA%B3%BC_%EC%A1%B0%ED%95%A9%281%29.ipynb" target="_blank">
+    <a href="https://mybinder.org/v2/gh/WooHyeok-Moon/Blog/master?filepath=_notebooks%2F2021-10-01-%EB%B2%A0%EC%9D%B4%EC%A6%88_%EC%A0%95%EB%A6%AC.ipynb" target="_blank">
         <img class="notebook-badge-image" src="/Blog/assets/badges/binder.svg" alt="Open In Binder"/>
     </a>
 </div>
 
           <div class="px-2">
-    <a href="https://colab.research.google.com/github/WooHyeok-Moon/Blog/blob/master/_notebooks/2021-08-14-순열과_조합(1).ipynb" target="_blank">
+    <a href="https://colab.research.google.com/github/WooHyeok-Moon/Blog/blob/master/_notebooks/2021-10-01-베이즈_정리.ipynb" target="_blank">
         <img class="notebook-badge-image" src="/Blog/assets/badges/colab.svg" alt="Open In Colab"/>
     </a>
 </div>
@@ -136,23 +136,38 @@ window.onload = wrap_img;
 #################################################
 ### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
 #################################################
-# file to edit: _notebooks/2021-08-14-순열과_조합(1).ipynb
+# file to edit: _notebooks/2021-10-01-베이즈_정리.ipynb
 -->
 
 <div class="container" id="notebook-container">
         
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#49692;&#50676;(permutation)">&#49692;&#50676;(permutation)<a class="anchor-link" href="#&#49692;&#50676;(permutation)"> </a></h2><p><code>-</code> 서로 다른 n개에서 r개를 <strong>순서대로</strong> 나열하는 것을 <code>순열</code>이라고 합니다. 기호로는 $_nP_r$ 로 나타내고, 계산식은 n(n-1)(n-2)$\cdots$(n-r+1) 입니다.</p>
+<h2 id="&#51204;&#54869;&#47456;-&#44277;&#49885;">&#51204;&#54869;&#47456; &#44277;&#49885;<a class="anchor-link" href="#&#51204;&#54869;&#47456;-&#44277;&#49885;"> </a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li><p>1부터 4까지 적힌 숫자 카드 4장 중 3장을 뽑아 숫자를 만들 때, 가능한 경우의 수를 구해봅시다.</p>
-<p>백의 자리에는 1, 2, 3, 4 총 4장의 카드 중 한 장을 선택할 수 있습니다.</p>
-<p>십의 자리에는 백의 자리에 들어간 한 장을 제외하고 남은 3장의 카드 중 한 장을 선택할 수 있습니다.</p>
-<p>일의 자리에는 남은 2장의 카드 중 한 장을 선택할 수 있습니다.</p>
-<p>위의 세 사건은 동시에 일어날 수 있기 때문에 곱의 법칙을 사용합니다. 따라서 가능한 경우의 수는 아래와 같습니다.
-$$4 * 3 * 2 = 24$$</p>
-<p>기호로 표현하면, 서로 다른 4개에서 3개를 순서대로 나열하는 것이기 때문에 같이 표현됩니다.
-$$_4P_3 = 4(4-1)(4-2) = 4 * 3 * 2 = 24$$</p>
+<li><p>사건 $B_1, B_2, \dots, B_k$는 상호배반이며 $(B_i \cap B_j = \varnothing, i \neq j, \cup_{i=1}^k B_i=S)$라고 한다. 이 때 임의의 사건 A에 대하여
+
+$$P(A)=\sum_{i=1}^k P(B_i)P(A|B_i)$$
+
+가 성립한다. 이를 <code>전확률 공식</code> 또는 <code>전체확률의 공식</code> 이라고 합니다.</p>
+</li>
+<li><p>표본공간 $S$가 서로 배반인 사건 $B_1, B_2, \dots, B_k$로 이루어져 있다면 그 표본공간 내부의 사건 $A$의 확률은 $A$와 $B_i$의 교집합들의 확률의 합으로 표현할 수 있습니다.
+
+$$P(A)=P(A \cap B_i) + P(A \cap B_2) + \cdots + P(A \cap B_k)$$
+</p>
+<p>조건부 확률에서 배운 식을 적용하면 아래와 같은 식을 유도할 수 있습니다.
+
+$$P(A \cap B_i) = P(B_i) \cdot P(A|B_i)$$
+
+
+$$P(A) = P(B_1)P(A|B_1) + P(B_2)P(A|B_2) + \cdots + P(B_k)P(A|B_k)$$
+</p>
+<p>베이즈 정리를 유도하기 위한 중간 과정이라고 생각해도 무방합니다.</p>
 </li>
 </ul>
 
@@ -168,39 +183,14 @@ $$_4P_3 = 4(4-1)(4-2) = 4 * 3 * 2 = 24$$</p>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="&#44228;&#49849;(factorial)">&#44228;&#49849;(factorial)<a class="anchor-link" href="#&#44228;&#49849;(factorial)"> </a></h3><p><code>-</code> 자연수 n에 대하여 1부터 n까지 모든 자연수의 곱을 <code>계승</code> 또는 <code>팩토리얼</code>이라고 하고 기호로는 n$!$을 사용합니다.</p>
-<ul>
-<li><p>순열의 계산식을 보면 n(n-1)(n-2)$\cdots$ 와 같이 숫자가 내림차순으로 나열되어 곱해지는 구조를 가집니다. 이러한 식을 팩토리얼을 사용하여 간편하게 표현할 수 있습니다.<br />
-$$_nP_r = \frac{n!}{(n-r)!}$$</p>
-<p>이 식을 사용하여 $_4P_3$을 표현해보겠습니다.<br />
-$$_4P_3 = \frac{4!}{(4-3)!} = \frac{4 * 3 * 2 * 1}{1} = 24$$</p>
+<h2 id="&#48288;&#51060;&#51592;-&#51221;&#47532;">&#48288;&#51060;&#51592; &#51221;&#47532;<a class="anchor-link" href="#&#48288;&#51060;&#51592;-&#51221;&#47532;"> </a></h2><ul>
+<li><p>사건 $B_1, B_2, \dots, B_k$는 상호배반이며 $(B_i \cap B_j = \varnothing, i \neq j, \cup_{i=1}^k B_i=S)$라고 한다. 이 때 임의의 사건 A가 일어났다는 조건 하에서 사건 B_j가 일어날 확률은
+  $$P(B_j|A)=\frac{P(B_j)P(A|B_j)}{\sum_{i=1}^k P(B_i)P(A|B_i)}$$
+가 성립한다. 이를 <code>베이즈 정리</code> 라고 합니다.</p>
 </li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<hr />
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#51473;&#48373;&#49692;&#50676;(permutation-with-repetition)">&#51473;&#48373;&#49692;&#50676;(permutation with repetition)<a class="anchor-link" href="#&#51473;&#48373;&#49692;&#50676;(permutation-with-repetition)"> </a></h2><p><code>-</code> 서로 다른 n개에서 <strong>중복을 허용하여</strong> r개를 순서대로 나열하는 것을 <code>중복순열</code>이라고 합니다. 기호로는 $_n\Pi_r$ 로 나타내고, 계산식은$n^r$ 입니다.</p>
-<ul>
-<li><p>위의 시행에서 카드를 뽑고 난 뒤 카드를 돌려놓지 않고 남은 카드로 다음 자리의 숫자를 결정했습니다. 이처럼 이전의 추출로 인해 다음 추출에서 처음과는 다른 상태에서 경우의 수를 얻는 것을 <strong>비복원추출</strong>이라고 합니다.</p>
-</li>
-<li><p>반대로 숫자만 결정하고 카드를 빼가지 않는 경우에는 다음 자리 숫자를 결정할 때에도 선택지의 개수가 동일합니다. 이처럼 항상 처음과 같은 상태에서 경우의 수를 추출하는 것을 <strong>복원추출</strong>이라고 하고, 중복을 허용한다고 말합니다. 이 때 가능한 경우의 수를 구해봅시다.</p>
-<p>백의 자리에는 1, 2, 3, 4 총 4장의 카드 중 한 장을 선택할 수 있습니다.</p>
-<p>십의 자리 또한 1, 2, 3, 4 총 4장의 카드 중 한 장을 선택할 수 있습니다.</p>
-<p>일의 자리 또한 1, 2, 3, 4 총 4장의 카드 중 한 장을 선택할 수 있습니다.</p>
-<p>마찬가지로 곱의 법칙을 사용합니다. 따라서 가능한 경우의 수는 아래와 같습니다.</p>
-<p>$$4 * 4 * 4 = 64$$</p>
-<p>기호와 수식으로 표현할 때는 순열(P) 대신 중복순열($\Pi$)을 사용합니다.
-$$_4\Pi_3 = 4^3 = 64$$</p>
+<li><p>좌항을 변환해보면 $P(B_j|A)=\frac{P(A \cap B_j)}{P(A)}$이고, 분자에는 조건부 확률의 공식, 분모에는 전확률의 공식을 적용하면 아래의 식을 유도할 수 있습니다.
+  $$\frac{P(B_j)P(A|B_j)}{\sum_{i=1}^k P(B_i)P(A|B_i)}$$</p>
+<p>이는 추후 베이지안 통계학의 기초가 됩니다.</p>
 </li>
 </ul>
 
@@ -219,7 +209,7 @@ $$_4\Pi_3 = 4^3 = 64$$</p>
         theme="github-light"
         crossorigin="anonymous"
         async>
-</script><a class="u-url" href="/Blog/statistics/2021/08/14/%EC%88%9C%EC%97%B4%EA%B3%BC_%EC%A1%B0%ED%95%A9(1).html" hidden></a>
+</script><a class="u-url" href="/Blog/statistical%20mathematics/2021/10/01/%EB%B2%A0%EC%9D%B4%EC%A6%88_%EC%A0%95%EB%A6%AC.html" hidden></a>
 </article>
       </div>
     </main><footer class="site-footer h-card">
