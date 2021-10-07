@@ -94,7 +94,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      1 min read
+      2 min read
     
 </span></p>
 
@@ -142,7 +142,7 @@ window.onload = wrap_img;
 </li>
 <li class="toc-entry toc-h2"><a href="#2.-확률변수">2. 확률변수 </a>
 <ul>
-<li class="toc-entry toc-h3"><a href="#2.1-함수-$F(x)$가-어떤-확률변수-$X$의-누적분포함수가-되는-필요충분조건은-다음과-같다.">2.1 함수 $F(x)$가 어떤 확률변수 $X$의 누적분포함수가 되는 필요충분조건은 다음과 같다. </a></li>
+<li class="toc-entry toc-h3"><a href="#2.1">2.1 </a></li>
 <li class="toc-entry toc-h3"><a href="#2.2">2.2 </a></li>
 <li class="toc-entry toc-h3"><a href="#2.3">2.3 </a></li>
 <li class="toc-entry toc-h3"><a href="#2.4">2.4 </a></li>
@@ -151,6 +151,15 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h3"><a href="#2.7">2.7 </a></li>
 <li class="toc-entry toc-h3"><a href="#2.8">2.8 </a></li>
 <li class="toc-entry toc-h3"><a href="#2.9">2.9 </a></li>
+<li class="toc-entry toc-h3"><a href="#2.10">2.10 </a></li>
+<li class="toc-entry toc-h3"><a href="#2.11">2.11 </a></li>
+<li class="toc-entry toc-h3"><a href="#2.12">2.12 </a></li>
+<li class="toc-entry toc-h3"><a href="#2.13">2.13 </a></li>
+<li class="toc-entry toc-h3"><a href="#2.14-마코프-확률부등식">2.14 마코프 확률부등식 </a></li>
+<li class="toc-entry toc-h3"><a href="#2.15-체비셰프-부등식">2.15 체비셰프 부등식 </a></li>
+<li class="toc-entry toc-h3"><a href="#2.16-코시-슈바르츠-부등식">2.16 코시-슈바르츠 부등식 </a></li>
+<li class="toc-entry toc-h3"><a href="#2.17">2.17 </a></li>
+<li class="toc-entry toc-h3"><a href="#2.18">2.18 </a></li>
 </ul>
 </li>
 </ul><!--
@@ -197,6 +206,14 @@ $$P(A \cup B) =  P(A) + P(B) - P(A \cup B)$$
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<hr>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="1.2-(전확률공식)">
 <a class="anchor" href="#1.2-(%EC%A0%84%ED%99%95%EB%A5%A0%EA%B3%B5%EC%8B%9D)" aria-hidden="true"><span class="octicon octicon-link"></span></a>1.2 (전확률공식)<a class="anchor-link" href="#1.2-(%EC%A0%84%ED%99%95%EB%A5%A0%EA%B3%B5%EC%8B%9D)"> </a>
 </h3>
@@ -205,6 +222,14 @@ $$P(A \cup B) =  P(A) + P(B) - P(A \cup B)$$
 $$P(A)=\sum_{i=1}^{k}P(B_i)P(A|B_i)$$
 </p>
 <p>가 성립한다.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<hr>
 
 </div>
 </div>
@@ -227,6 +252,14 @@ $$P(B_j|A)=\frac{P(B_j)P(A|B)}{\sum_{i=1}^{k}P(B_i)P(A|B_i)}$$
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<hr>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="2.-확률변수">
 <a class="anchor" href="#2.-%ED%99%95%EB%A5%A0%EB%B3%80%EC%88%98" aria-hidden="true"><span class="octicon octicon-link"></span></a>2. 확률변수<a class="anchor-link" href="#2.-%ED%99%95%EB%A5%A0%EB%B3%80%EC%88%98"> </a>
 </h2>
@@ -236,9 +269,10 @@ $$P(B_j|A)=\frac{P(B_j)P(A|B)}{\sum_{i=1}^{k}P(B_i)P(A|B_i)}$$
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="2.1-함수-$F(x)$가-어떤-확률변수-$X$의-누적분포함수가-되는-필요충분조건은-다음과-같다.">
-<a class="anchor" href="#2.1-%ED%95%A8%EC%88%98-%24F(x)%24%EA%B0%80-%EC%96%B4%EB%96%A4-%ED%99%95%EB%A5%A0%EB%B3%80%EC%88%98-%24X%24%EC%9D%98-%EB%88%84%EC%A0%81%EB%B6%84%ED%8F%AC%ED%95%A8%EC%88%98%EA%B0%80-%EB%90%98%EB%8A%94-%ED%95%84%EC%9A%94%EC%B6%A9%EB%B6%84%EC%A1%B0%EA%B1%B4%EC%9D%80-%EB%8B%A4%EC%9D%8C%EA%B3%BC-%EA%B0%99%EB%8B%A4." aria-hidden="true"><span class="octicon octicon-link"></span></a>2.1 함수 $F(x)$가 어떤 확률변수 $X$의 누적분포함수가 되는 필요충분조건은 다음과 같다.<a class="anchor-link" href="#2.1-%ED%95%A8%EC%88%98-%24F(x)%24%EA%B0%80-%EC%96%B4%EB%96%A4-%ED%99%95%EB%A5%A0%EB%B3%80%EC%88%98-%24X%24%EC%9D%98-%EB%88%84%EC%A0%81%EB%B6%84%ED%8F%AC%ED%95%A8%EC%88%98%EA%B0%80-%EB%90%98%EB%8A%94-%ED%95%84%EC%9A%94%EC%B6%A9%EB%B6%84%EC%A1%B0%EA%B1%B4%EC%9D%80-%EB%8B%A4%EC%9D%8C%EA%B3%BC-%EA%B0%99%EB%8B%A4."> </a>
+<h3 id="2.1">
+<a class="anchor" href="#2.1" aria-hidden="true"><span class="octicon octicon-link"></span></a>2.1<a class="anchor-link" href="#2.1"> </a>
 </h3>
+<p>함수 $F(x)$가 어떤 확률변수 $X$의 누적분포함수가 되는 필요충분조건은 다음과 같다.</p>
 <p>
 $$\lim_{x \to -\infty} F(x) = 0$$
 
@@ -258,10 +292,26 @@ $$a&lt;b이면\,F(a)\leq F(b)$$
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<hr>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="2.2">
 <a class="anchor" href="#2.2" aria-hidden="true"><span class="octicon octicon-link"></span></a>2.2<a class="anchor-link" href="#2.2"> </a>
 </h3>
 <p>연속형확률변수 $X$의 확률밀도함수가 $f(x)$이고 확률분포함수가 $F(x)$이면, $f(x)=\frac{d}{dx} F(x)$를 만족한다.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<hr>
 
 </div>
 </div>
@@ -277,6 +327,14 @@ $$a&lt;b이면\,F(a)\leq F(b)$$
 모든 $x_2$에 대하여 $\lim_{x_1 \to -\infty} F(x_1, x_2) = F(-\infty, x_2) = 0$, $\lim_{x1 \to \infty, x2 \to \infty} F(x_1, x_2) = F(\infty, \infty) = 1$<br>
 모든 $a&lt;b$, $c&lt;d$에 대하여 $F(b, d) - F(b, c) - F(a, d) - F(a, d) + F(a, c) \geq 0$<br>
 모든 $x_1, x_2$에 대하여 $\lim_{h \to 0^+} F(x_1, x_2 + h) = \lim_{h \to 0^+} F(x_1 + h, x_2) = F(x_1, x_2)$</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<hr>
 
 </div>
 </div>
@@ -304,6 +362,14 @@ $$f_X(x) = \int_{-\infty}^{\infty}f_{X,Y}(x,y)\mathrm{d}y,\; f_Y(y) = \int_{-\in
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<hr>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="2.5">
 <a class="anchor" href="#2.5" aria-hidden="true"><span class="octicon octicon-link"></span></a>2.5<a class="anchor-link" href="#2.5"> </a>
 </h3>
@@ -312,6 +378,14 @@ $$f_X(x) = \int_{-\infty}^{\infty}f_{X,Y}(x,y)\mathrm{d}y,\; f_Y(y) = \int_{-\in
 $$f_{X,Y}(x,y) = f_X(x)\cdot f_Y(y)$$
 </p>
 <p>이다.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<hr>
 
 </div>
 </div>
@@ -330,6 +404,14 @@ $$E(c)=c$$
 $$E(aX+b)=aE(X)+b$$
 </p>
 <p>를 만족한다.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<hr>
 
 </div>
 </div>
@@ -356,6 +438,14 @@ $$E[g(X)h(Y)] = E[g(X)] \cdot E[h(Y)]$$
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<hr>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="2.8">
 <a class="anchor" href="#2.8" aria-hidden="true"><span class="octicon octicon-link"></span></a>2.8<a class="anchor-link" href="#2.8"> </a>
 </h3>
@@ -374,6 +464,14 @@ $$Var(\sum_{i=1}^n X_i)=\sum_{i=1}^n Var(X_i)$$
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<hr>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="2.9">
 <a class="anchor" href="#2.9" aria-hidden="true"><span class="octicon octicon-link"></span></a>2.9<a class="anchor-link" href="#2.9"> </a>
 </h3>
@@ -382,6 +480,221 @@ $$\begin{aligned}
 Cov(X,Y)=&amp;E[(X-EX)(Y-EY)]\\
 &amp;E(XY)-E(X)E(Y)
 \end{aligned}$$
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<hr>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="2.10">
+<a class="anchor" href="#2.10" aria-hidden="true"><span class="octicon octicon-link"></span></a>2.10<a class="anchor-link" href="#2.10"> </a>
+</h3>
+<p>확률변수 $X_1, X_2, \cdots, X_n$이 있을 때,</p>
+<p>
+$$Var(\sum_{i=1}^n X_i) = \sum_{i=1}^n Var(X_i) + 2\sum_{j&lt;k}Cov(X_j, X_k)$$
+</p>
+<p>가 성립한다.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<hr>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="2.11">
+<a class="anchor" href="#2.11" aria-hidden="true"><span class="octicon octicon-link"></span></a>2.11<a class="anchor-link" href="#2.11"> </a>
+</h3>
+<p>두 확률변수 $X, Y$에 대하여</p>
+<p>
+$$E[E(Y|X)] = E(Y)$$
+</p>
+<p>가 성립한다.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<hr>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="2.12">
+<a class="anchor" href="#2.12" aria-hidden="true"><span class="octicon octicon-link"></span></a>2.12<a class="anchor-link" href="#2.12"> </a>
+</h3>
+<p>확률변수 $X$와 $Y$가 독립이면</p>
+<p>
+$$E(Y|x) = E(Y), E(X|y) = E(X)$$
+</p>
+<p>가 성립한다.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<hr>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="2.13">
+<a class="anchor" href="#2.13" aria-hidden="true"><span class="octicon octicon-link"></span></a>2.13<a class="anchor-link" href="#2.13"> </a>
+</h3>
+<p>두 확률변수 $X, Y$에 대하여</p>
+<p>
+$$Var(Y) = E[Var(Y|X)] + Var[E(Y|X)]$$
+</p>
+<p>가 성립한다.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<hr>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="2.14-마코프-확률부등식">
+<a class="anchor" href="#2.14-%EB%A7%88%EC%BD%94%ED%94%84-%ED%99%95%EB%A5%A0%EB%B6%80%EB%93%B1%EC%8B%9D" aria-hidden="true"><span class="octicon octicon-link"></span></a>2.14 마코프 확률부등식<a class="anchor-link" href="#2.14-%EB%A7%88%EC%BD%94%ED%94%84-%ED%99%95%EB%A5%A0%EB%B6%80%EB%93%B1%EC%8B%9D"> </a>
+</h3>
+<p>실함수 $u(x) &gt; 0$라고 할때, 확률변수 $X$는 임의의 상수 $c&gt;0$에 대하여</p>
+<p>
+$$P[u(X) \geq c] \leq \frac{E[u(X)]}{c}$$
+</p>
+<p>를 만족한다.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<hr>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="2.15-체비셰프-부등식">
+<a class="anchor" href="#2.15-%EC%B2%B4%EB%B9%84%EC%85%B0%ED%94%84-%EB%B6%80%EB%93%B1%EC%8B%9D" aria-hidden="true"><span class="octicon octicon-link"></span></a>2.15 체비셰프 부등식<a class="anchor-link" href="#2.15-%EC%B2%B4%EB%B9%84%EC%85%B0%ED%94%84-%EB%B6%80%EB%93%B1%EC%8B%9D"> </a>
+</h3>
+<p>확률변수 $X$의 평균이 $\mu$이고 분산이 $\sigma^2 &lt; \infty$이면, 임의의 $k&gt;0$에 대하여</p>
+<p>
+$$P[|X-\mu| \geq k\sigma] \leq \frac{1}{k^2}$$
+</p>
+<p>이 성립한다.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<hr>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="2.16-코시-슈바르츠-부등식">
+<a class="anchor" href="#2.16-%EC%BD%94%EC%8B%9C-%EC%8A%88%EB%B0%94%EB%A5%B4%EC%B8%A0-%EB%B6%80%EB%93%B1%EC%8B%9D" aria-hidden="true"><span class="octicon octicon-link"></span></a>2.16 코시-슈바르츠 부등식<a class="anchor-link" href="#2.16-%EC%BD%94%EC%8B%9C-%EC%8A%88%EB%B0%94%EB%A5%B4%EC%B8%A0-%EB%B6%80%EB%93%B1%EC%8B%9D"> </a>
+</h3>
+<p>두 확률변수 $X, Y$에 대해서 $E(X^2)&lt;\infty, E(Y^2)&lt;\infty$가 만족된다면,</p>
+<p>
+$$[E(XY)]^2 \leq E(X^2) \cdot E(Y^2)$$
+</p>
+<p>이 성립한다. (단, 등식은 어떤 상수 $c$에 대하여 $P(Y-cX)=1$인 경우에 성립함.)</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<hr>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="2.17">
+<a class="anchor" href="#2.17" aria-hidden="true"><span class="octicon octicon-link"></span></a>2.17<a class="anchor-link" href="#2.17"> </a>
+</h3>
+<p>확률변수 $X$가 $B(n, p)$ 분포를 따른다고 하자. 이때 $n$이 커짐에 따라 $p$가 0으로 수렴하되 $np=\lambda$를 만족하면, $x=0, 1, 2, \cdots$에 대해서</p>
+<p>
+$$\lim_{n \to \infty} \begin{pmatrix} n\\ x \end{pmatrix} p^x(1-p)^(n-x) = \frac{exp(-\lambda)\lambda^x}{x!}$$
+</p>
+<p>이 성립한다.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<hr>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="2.18">
+<a class="anchor" href="#2.18" aria-hidden="true"><span class="octicon octicon-link"></span></a>2.18<a class="anchor-link" href="#2.18"> </a>
+</h3>
+<p>$X\sim GEO(p)$이면, 임의의 자연수 $j, k$에 대하여,</p>
+<p>
+$$P(X&gt;j+k|X&gt;j)=P(X&gt;k)$$
+</p>
+<p>가 성립한다.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<hr>
+
 </div>
 </div>
 </div>
