@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>순열과 조합(3) | Brain</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="순열과 조합(3)" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="complete" />
+<meta property="og:description" content="complete" />
+<link rel="canonical" href="https://woohyeok-moon.github.io/Blog/statistical%20mathematics/2021/08/17/%EC%88%98%ED%86%B56.html" />
+<meta property="og:url" content="https://woohyeok-moon.github.io/Blog/statistical%20mathematics/2021/08/17/%EC%88%98%ED%86%B56.html" />
+<meta property="og:site_name" content="Brain" />
+<meta property="og:image" content="https://woohyeok-moon.github.io/Blog/images/chart-preview.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-08-17T00:00:00-05:00" />
+<script type="application/ld+json">
+{"description":"complete","url":"https://woohyeok-moon.github.io/Blog/statistical%20mathematics/2021/08/17/%EC%88%98%ED%86%B56.html","@type":"BlogPosting","headline":"순열과 조합(3)","dateModified":"2021-08-17T00:00:00-05:00","datePublished":"2021-08-17T00:00:00-05:00","image":"https://woohyeok-moon.github.io/Blog/images/chart-preview.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://woohyeok-moon.github.io/Blog/statistical%20mathematics/2021/08/17/%EC%88%98%ED%86%B56.html"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/Blog/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://woohyeok-moon.github.io/Blog/feed.xml" title="Brain" /><link rel="shortcut icon" type="image/x-icon" href="/Blog/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/katex.min.css" integrity="sha512-h7nl+xz8wgDlNM4NqKEM4F1NkIRS17M9+uJwIGwuo8vGqIl4BhuCKdxjWEINm+xyrUjNCnK5dCrhM0sj+wTIXw==" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/katex.min.js" integrity="sha512-/CMIhXiDA3m2c9kzRyd97MTb3MC6OVnx4TElQ7fkkoRghwDf6gi41gaT1PwF270W6+J60uTmwgeRpNpJdRV6sg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/contrib/auto-render.min.js" integrity="sha512-Do7uJAaHZm5OLrIv/yN4w0iG1dbu01kzdMNnFfu/mAqgUk6Nniv2JYHcwH+cNwjqgLcqcuBBk+JRvprLVI8azg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha512-0doc9hKxR3PYwso42RD1p5ySZpzzuDiOwMrdCEh2WdJZCjcmFKc/wEnL+z8fBQrnHoiNWbo+3fiGkOYXBdQp4A==" crossorigin="anonymous"></script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement( document.body, {
+        delimiters: [
+            {left: "$$", right: "$$", display: true},
+            {left: "[%", right: "%]", display: true},
+            {left: "$", right: "$", display: false}
+        ]}
+        );
+    });
+    </script>
+
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/Blog/">Brain</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/Blog/about/">About Me</a><a class="page-link" href="/Blog/search/">Search</a><a class="page-link" href="/Blog/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">6. 순열과 조합(3)</h1><p class="page-description">complete</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2021-08-17T00:00:00-05:00" itemprop="datePublished">
+        Aug 17, 2021
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      1 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/Blog/categories/#Statistical Mathematics">Statistical Mathematics</a>
+        
+      
+      </p>
+    
+
+    
+      
+        <div class="pb-5 d-flex flex-wrap flex-justify-end">
+          <div class="px-2">
+
+    <a href="https://github.com/WooHyeok-Moon/Blog/tree/master/_notebooks/2021-08-17-수통6.ipynb" role="button" target="_blank">
+<img class="notebook-badge-image" src="/Blog/assets/badges/github.svg" alt="View On GitHub">
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://mybinder.org/v2/gh/WooHyeok-Moon/Blog/master?filepath=_notebooks%2F2021-08-17-%EC%88%98%ED%86%B56.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/Blog/assets/badges/binder.svg" alt="Open In Binder"/>
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://colab.research.google.com/github/WooHyeok-Moon/Blog/blob/master/_notebooks/2021-08-17-수통6.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/Blog/assets/badges/colab.svg" alt="Open In Colab"/>
+    </a>
+</div>
+        </div>
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2021-08-17-수통6.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#51312;&#54633;(combination)">&#51312;&#54633;(combination)<a class="anchor-link" href="#&#51312;&#54633;(combination)"> </a></h2><p><code>-</code> 서로 다른 n개 중 r개를 <strong>순서에 관계없이</strong> 선택하는 것을 <code>조합</code>이라고 합니다. 기호로는 $_nC_r$ 로 나타내고, 계산식은 $\frac{n!}{r!(n-r)!}$ 입니다.</p>
+<ul>
+<li><p>지금까지 배운 순열과는 달리 조합에서는 <strong>순서</strong>를 고려하지 않기 때문에, 순서로 인해 발생하는 중복들을 제거해줘야 합니다.</p>
+</li>
+<li><p>A부터 D까지의 알파벳 카드 중 3개의 카드를 뽑는 시행을 해보겠습니다.</p>
+<p>첫 번째 카드를 고를 때 가능한 경우는 A, B, C, D 총 4가지입니다.</p>
+<p>두 번째 카드를 고를 때 가능한 경우는 첫 번째 카드를 제외하여 3가지입니다.</p>
+<p>세 번째 카드를 고를 때 가능한 경우는 나머지 2가지입니다.</p>
+<p>따라서 가능한 경우의 수는 아래와 같습니다.
+$$4 * 3 * 2 = 24$$</p>
+</li>
+<li><p>이 경우의 수는 순서를 고려한 경우의 수입니다. 하지만 저희는 순서와는 관계없는 단순한 뽑기를 진행하고 있기 때문에 순서로 인해 발생하는 중복들을 제거하는 작업이 필요합니다. 뽑은 카드가 A, B, C라고 가정했을 때, 이 세 카드에 의해 중복되는 경우를 구해보겠습니다.</p>
+<p>(A, B, C)<br />
+(A, C, B)<br />
+(B, A, C)<br />
+(B, C, A)<br />
+(C, A, B)<br />
+(C, B, A)</p>
+<p>총 6가지이며, $3!=3*2*1=6$ 과 같이 식으로도 계산할 수 있습니다. 저희는 중복되는 경우는 빼는 것이 아니라 나눠준다는 것을 배웠습니다. 여기서도 마찬가지로 6을 나눠주겠습니다.</p>
+<p>$$\frac{24}{6}=4$$</p>
+<p>따라서 경우의 수는 4이며, $_nC_r$을 사용하여 아래와 같이 구할 수 있습니다.
+$$_4C_3=\frac{4!}{3!(4-3)!}=\frac{24}{6}$$</p>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<hr />
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#51473;&#48373;&#51312;&#54633;">&#51473;&#48373;&#51312;&#54633;<a class="anchor-link" href="#&#51473;&#48373;&#51312;&#54633;"> </a></h2><p><code>-</code> 서로 다른 n개에서 r개를 <strong>중복을 허용하여</strong> 선택하는 것을 <code>중복조합</code>이라고 합니다. 기호로는 $_nH_r$로 나타내고, 계산식은 $_nH_r=_{n+k-1}C_r=\frac{(n+k-1)!}{r!(n-1)!}$ 입니다.</p>
+<ul>
+<li><p>A부터 D까지의 알파벳 중 하나를 <strong>중복을 허용하여</strong> 3번 선택한다고 가정해봅시다. 이 예제는 6개의 빈 칸 (□ □ □ □ □ □) 중 3개의 칸막이가 들어갈 칸을 선택하는 예제와 같습니다. 그리고 각 칸막이 사이에는 하나의 알파벳만 들어갈 수 있습니다. 뽑은 카드가 A, B, C라고 가정했을 때, 만약 1, 2, 3번째 칸을 선택했다면 | | | C C C 가 되는 것이고, 2, 4, 6번째 칸을 선택했다면 A | B | C | 가 되는 것이고, 1, 3, 5번째 칸을 선택했다면 | A | B | C 가 되는 것입니다.</p>
+</li>
+<li><p>이제 예제는 서로 다른 6개 중 4개를 <strong>중복을 허용하여</strong> 선택하는 경우로 바뀌었습니다. 이를 통해 $_nH_r=_{n+k-1}C_r$ 임을 알 수 있으며, 경우의 수는 아래와 같습니다.
+$$_4H_3=_6C_3=\frac{6!}{3!3!}=\frac{6*5*4}{3*2*1}=20$$</p>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div>
+
+
+
+  </div><!-- from https://github.com/utterance/utterances -->
+<script src="https://utteranc.es/client.js"
+        repo="WooHyeok-Moon/Blog"
+        issue-term="title"
+        label="blogpost-comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script><a class="u-url" href="/Blog/statistical%20mathematics/2021/08/17/%EC%88%98%ED%86%B56.html" hidden></a>
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/Blog/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/Blog/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/Blog/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>A theory warehouse</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/https%3A%2F%2Fgithub.com%2FWooHyeok-Moon" target="_blank" title="https://github.com/WooHyeok-Moon"><svg class="svg-icon grey"><use xlink:href="/Blog/assets/minima-social-icons.svg#github"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
